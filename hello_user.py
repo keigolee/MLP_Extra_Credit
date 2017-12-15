@@ -3,8 +3,8 @@ import tornado.web
 
 class HelloUserHandler(tornado.web.RequestHandler):
     def get(self):
-        user = self.get_argument('username')
-        write_str = "Hello, " + user
+        username = self.get_argument('user')
+        write_str = "Hello, " + username
         self.write(write_str)
 
 if __name__ == "__main__":
